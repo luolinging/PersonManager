@@ -1,0 +1,14 @@
+<Context>
+    <!-- 定义数据源 -->
+    <Resource 
+        name="jdbc/zyxDataSource"
+        auth="Container"
+        type="javax.sql.DataSource"
+        username="root"
+        password="123456"
+        maxIdle="30"
+        maxActive="100"
+        maxWait="5000"
+        driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost:3306/personmanager?useUnicode=true&amp;characterEncoding=UTF-8" />
+</Context>

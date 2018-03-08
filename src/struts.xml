@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
+
+
+	<package name="default" namespace="/" extends="struts-default">
+
+
+		<action name="toLogin" class="com.person.action.LoginAction"
+			method="form">
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+
+		<action name="login" class="com.person.action.LoginAction"
+			method="login">
+			<result name="input">/jsp/login.jsp</result>
+			<result name="login">/jsp/header.jsp</result>
+		</action>
+
+		<action name="logout" class="com.person.action.LoginAction"
+			method="logout">
+			<result name="logout">/jsp/header.jsp</result>
+		</action>
+
+		<action name="toRegister" class="com.person.action.UserAction"
+			method="form">
+			<result name="input">/jsp/register.jsp</result>
+		</action>
+
+		<action name="register" class="com.person.action.UserAction"
+			method="register">
+			<result name="input">/jsp/register.jsp</result>
+			<result name="register">/jsp/register.jsp</result>
+		</action>
+
+
+		
+
+		
+
+		<action name="userList" class="com.person.action.UserAction"
+			method="userList">
+			<result name="getUsers">/jsp/usersEditList.jsp</result>
+		</action>
+
+		<action name="getUser" class="com.person.action.UserAction"
+			method="getUserEdit">
+			<result name="getUser">/jsp/borrow.jsp</result>
+		</action>
+		
+		<action name="getUserEdit" class="com.person.action.UserAction"
+			method="getUserEdit">
+			<result name="getUser">/jsp/user.jsp</result>
+		</action>
+
+		
+
+	</package>
+
+</struts>
